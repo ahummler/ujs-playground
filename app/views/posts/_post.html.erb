@@ -1,0 +1,7 @@
+<div class="post">
+<h3><%= link_to post.title, post %></h3>
+<p><%= post.body %></p>
+<p><%= link_to "Delete", post_path(post), method: :delete, remote: true, data: {confirm: "Are you sure?"} %>
+</p>
+<hr>
+</div>

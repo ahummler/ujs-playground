@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>UjsPlayground</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header>
+	<nav>
+	<%= link_to 'all posts', posts_path %>
+	<%= link_to 'new post', new_post_path %>
+	</nav>
+</header>
+<%= render 'shared/flash' %>
+
+
+<%= yield %>
+
+</body>
+</html>

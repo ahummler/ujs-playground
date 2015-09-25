@@ -1,0 +1,7 @@
+<% if @post.errors.any? %>
+alert('something went wrong');
+<% else %>
+$('#posts').append("<%= j render @post %>");
+$('#post_title, #post_body').val('');
+<% end %>
+$("#notice").html("<%= j flash[:notice] %>");
